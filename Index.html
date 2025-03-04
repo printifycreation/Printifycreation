@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printifycreation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        #products {
+            flex: 2;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cart {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-left: 20px;
+        }
+
+        #payment-instructions {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Printifycreation 🎨</h1>
+    </header>
+    <main>
+        <section id="products">
+            <h2>Our Products 🛍️</h2>
+            <div class="product">
+                <h3>Black Cup ☕</h3>
+                <img src="https://i.ibb.co/35NKbHCL/Yellow-Photography-Workshop-Advertisement-Your-Story-20250303-173018-0000.png" alt="Black Cup">
+                <p>Price: ₹289</p>
+                <button onclick="addToCart('Black Cup', 289)">🛒 Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Coastal Cover 🦟</h3>
+                <img src="https://i.ibb.co/P8LMk5b/Yellow-Photography-Workshop-Advertisement-Your-Story-20250303-172951-0000.png" alt="Coastal Cover">
+                <p>Price: ₹119</p>
+                <button onclick="addToCart('Coastal Cover', 119)">🛒 Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Heart Handle Cup ❤️</h3>
+                <img src="https://i.ibb.co/2xknnVT/Yellow-Photography-Workshop-Advertisement-Your-Story-20250303-172935-0000.png" alt="Heart Handle Cup">
+                <p>Price: ₹239</p>
+                <button onclick="addToCart('Heart Handle Cup', 239)">🛒 Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>White Cup 🤍</h3>
+                <img src="https://i.ibb.co/1G5s2T5Z/Yellow-Photography-Workshop-Advertisement-Your-Story-20250303-172902-0000.png" alt="White Cup">
+                <p>Price: ₹189</p>
+                <button onclick="addToCart('White Cup', 189)">🛒 Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Magic Cup ✨</h3>
+                <img src="https://i.ibb.co/tMSCvrG9/MAgic-20250304-145052-0000.png" alt="Magic Cup">
+                <p>Price: ₹279</p>
+                <button onclick="addToCart('Magic Cup', 279)">🛒 Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Keychain 🔑</h3>
+                <img src="https://i.ibb.co/SXs037sP/2-more-shapes-20250304-145827-0000.png" alt="Keychain">
+                <p>Price: ₹189</p>
+                <button onclick="addToCart('Keychain', 189)">🛒 Add to Cart</button>
+            </div>
+        </section>
+        <section id
