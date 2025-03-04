@@ -97,4 +97,62 @@
                 <button onclick="addToCart('Keychain', 189)">🛒 Add to Cart</button>
             </div>
         </section>
-        <section id
+                <section id="cart">
+            <h2>Your Cart 🛒</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: ₹0</p>
+            <button onclick="checkout()">💳 Checkout</button>
+        </section>
+    </main>
+    <section id="payment-instructions">
+        <h2>Payment Instructions 💳</h2>
+        <p>After clicking the checkout button, please complete your payment using the link below:</p>
+        <a href="https://i.ibb.co/ZzCqJmXF/IMG-20250304-WA0001.jpg" target="_blank">Payment Link</a>
+        <p>After payment, please upload the payment confirmation screenshot.</p>
+    </section>
+    <footer>
+        <p>Contact us for more details 📞.</p>
+    </footer>
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            cart.push({ name: productName, price: price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ₹${item.price}`;
+                cartItems.appendChild(li);
+            });
+            document.getElementById('total-price').textContent = `Total: ₹${total}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+
+            // Create a summary of the cart items
+            let orderSummary = "Your Order:\n";
+            cart.forEach(item => {
+                orderSummary += `${item.name} - ₹${item.price}\n`;
+            });
+            orderSummary += `Total: ₹${total}\n\n`;
+            orderSummary += "Please complete your payment using the link below:\n";
+            orderSummary += "Payment Link: https://i.ibb.co/ZzCqJmXF/IMG-20250304-WA0001.jpg\n\n";
+            orderSummary += "After payment, please upload the payment confirmation screenshot.";
+
+            // Alert the user with the order summary and payment link
+            alert(orderSummary);
+        }
+    </script>
+</body>
+</html>
